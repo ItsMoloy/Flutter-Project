@@ -1,4 +1,5 @@
 import 'dart:convert';
+// TODO: consider supporting POST-based login and improved error mapping from API responses
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart' show kIsWeb;
 
