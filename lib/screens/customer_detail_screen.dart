@@ -34,7 +34,7 @@ class CustomerDetailScreen extends StatelessWidget {
                   children: [
                     Text(customer.name, style: Theme.of(context).textTheme.headlineSmall),
                     const SizedBox(height: 8),
-                    Text('Mobile: ${customer.mobile ?? '-'}'),
+                    Text('Mobile: ${customer.mobile ?? 'N/A'}'),
                     const SizedBox(height: 8),
                     Text('Balance: ${customer.balance.toStringAsFixed(2)}'),
                   ],
