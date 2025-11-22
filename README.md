@@ -23,6 +23,14 @@ Assets included in this repo
 - assets/list.png — list placeholder image
 - assets/customer.png — default customer avatar
 
+Screenshots
+
+![Login screen](assets/login.png)
+
+![Customer list](assets/list.png)
+
+![Customer avatar](assets/customer.png)
+
 Changelog / What I changed in this repository
 - Implemented token-based login and persistence using `AuthProvider`.
 - Built paginated customer list and customer detail screens (providers in `lib/providers`).
