@@ -35,3 +35,6 @@ Changelog / What I changed in this repository
 Notes
 - The `server` proxy is intended for local development only (see `server/README.md`). If you deploy to production, configure proper CORS on the image host or secure the proxy.
 
+Login
+- The login page has been polished for a smoother sign-in experience.
+
