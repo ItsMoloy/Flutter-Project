@@ -8,6 +8,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../providers/auth_provider.dart';
 import '../services/api_service.dart';
 
+// AuthImage: displays protected images using the app client so Authorization
+// headers can be attached when required (falls back to network image on web).
+
 // A 1x1 transparent PNG used as an in-memory placeholder for FadeInImage
 const List<int> _kTransparentImageBytes = <int>[
   0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A,
