@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CustomerProvider(api)),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Customer App',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo, brightness: Brightness.light),
