@@ -27,7 +27,8 @@ class CustomerProvider extends ChangeNotifier {
     error = null;
     notifyListeners();
     try {
-      final res = await api.getCustomerList(searchQuery: searchQuery, pageNo: pageNo, pageSize: pageSize);
+      final q = searchQuery.trim();
+      final res = await api.getCustomerList(searchQuery: q, pageNo: pageNo, pageSize: pageSize);
       if (res.containsKey('error') && res['error'] == true) {
         error = res['message'] ?? 'Failed to load customers';
         hasMore = false;
@@ -67,7 +68,7 @@ class CustomerProvider extends ChangeNotifier {
       if (pageNo == 1) customers = fetched; else customers.addAll(fetched);
       if (fetched.length < pageSize) hasMore = false; else pageNo++;
     } catch (e) {
-      error = e.toString();
+      error = 'Customer load error: ${e.toString()}';
     } finally {
       loading = false;
       notifyListeners();
