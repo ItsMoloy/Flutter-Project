@@ -35,7 +35,7 @@ class AuthProvider extends ChangeNotifier {
     try {
       final res = await api.login(username: username, password: password, comId: comId);
       if (res.containsKey('error') && res['error'] == true) {
-        _error = res['message'] ?? 'Login failed';
+        _error = (res['message'] ?? 'Login failed').toString();
         return false;
       }
       String? t;
@@ -51,7 +51,7 @@ class AuthProvider extends ChangeNotifier {
       }
       return _token != null;
     } catch (e) {
-      _error = e.toString();
+      _error = 'Login error: ${e.toString()}';
       return false;
     } finally {
       _loading = false;
