@@ -43,7 +43,7 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
     final auth = Provider.of<AuthProvider>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Customers'),
+        title: const Text('Customer Manager'),
         actions: [
           IconButton(
             onPressed: () {
@@ -63,7 +63,7 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
                 Expanded(
                   child: TextField(
                     controller: _searchCtrl,
-                    decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search customers...'),
+                    decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search customers by name or email...'),
                     onChanged: (q) {
                       _searchDebounce?.cancel();
                       _searchDebounce = Timer(const Duration(milliseconds: 500), () {
