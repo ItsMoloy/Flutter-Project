@@ -7,8 +7,8 @@ void main() {
     final c1 = Customer.fromJson(json1);
     expect(c1.id, 123);
     expect(c1.name, 'Alice');
-    expect(c1.balance, 45.6);
-    expect(c1.imagePath, 'images/a.png');
+    expect(c1.balance, equals(45.6), reason: 'parses numeric balance string');
+    expect(c1.imagePath, 'images/a.png', reason: 'reads image path from JSON');
 
     final json2 = {'id': 5, 'name': 'Bob', 'balance': 10.0};
     final c2 = Customer.fromJson(json2);
